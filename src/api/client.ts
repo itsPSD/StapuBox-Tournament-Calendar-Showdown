@@ -30,11 +30,18 @@ export async function fetchSports() {
   return data;
 }
 
-export async function fetchTournaments(params: { sports_id?: string | number; month?: number }) {
-  const { sports_id, month } = params;
+export async function fetchTournaments(params: { sport_id?: string | number; month?: number }) {
+  const { sport_id, month } = params;
   const base = 'https://stapubox.com/tournament/demo';
-  const url = sports_id && month ? `${base}?sports_id=${sports_id}&month=${month}` : base;
-  const ckey = `cache:tournaments:${sports_id ?? 'all'}:${month ?? 'all'}`;
+  let url = base;
+  if (sport_id && month) {
+    url = `${base}?sport_id=${sport_id}&sports_id=${sport_id}&month=${month}`;
+  } else if (sport_id) {
+    url = `${base}?sport_id=${sport_id}&sports_id=${sport_id}`;
+  } else if (month) {
+    url = `${base}?month=${month}`;
+  }
+  const ckey = `cache:tournaments:${sport_id ?? 'all'}:${month ?? 'all'}`;
   const cached = await getCache(ckey);
   if (cached) return cached;
   const res = await http.get(url);

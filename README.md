@@ -22,9 +22,15 @@ eas login
 eas build:configure
 eas build -p android --profile preview
 ```
-You’ll get a link with an APK artifact you can share/install.
+You'll get a link with an APK artifact you can share/install.
 
-### What’s inside
+**Download APK:** [Download APK](https://expo.dev/accounts/itspsd/projects/stapubox-calendar/builds/88b2158e-a53b-4f23-aa69-6adf94b23de8)
+
+### Demo Video
+
+Watch the app in action: [Demo Video](https://img.itspsd.in/u/Demo%20Video_Priyangshu_%20StapuBox%20Tournament%20Calendar%20Showdown.mp4)
+
+### What's inside
 
 - Sports filter dropdown (default “All”). Data from `https://stapubox.com/sportslist`.
 - Month view for Aug–Sep–Oct. Only the tournament start date is highlighted.
