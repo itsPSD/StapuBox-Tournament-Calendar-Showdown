@@ -4,7 +4,7 @@
     "slug": "stapubox-calendar",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/stapubox_logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "plugins": [
@@ -19,8 +19,9 @@
         }
       ]
     ],
+    "scheme": "stapubox",
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/stapubox_logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -29,13 +30,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/stapubox_logo.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.itspsd.stapuboxcalendar"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9ef017d2-8811-4551-8e45-52790fd5ce17"
+      }
     }
   }
 }
